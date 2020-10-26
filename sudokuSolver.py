@@ -118,32 +118,30 @@ def solver(bo):
     for i in range(1, 10):
         if valid(bo,i,(row, col)):
             board[row][col] = i
-#            screen.fill((0,255,0), textobj[col][row])
-#            font = pygame.font.SysFont(None, 50)
-#             text = font.render(str(i), True, (25,2,200))
-#             screen.blit(text, textobj[col][row]) 
-#             pygame.display.update()
+            screen.fill((0,255,0), textobj[col][row])
+            font = pygame.font.SysFont(None, 50)
+            text = font.render(str(i), True, (25,2,200))
+            screen.blit(text, textobj[col][row]) 
+            pygame.display.update()
             if solver(bo):
                 return True
             bo[row][col] = 0
     return False    
    
-# pygame.init()
-# screen = pygame.display.set_mode([500, 500])
-# screen.fill((255, 255, 255))
-# drawGrid()
-# populate()
+pygame.init()
+screen = pygame.display.set_mode([500, 500])
+screen.fill((255, 255, 255))
+drawGrid()
+populate()
 print_board(board)
 solver(board)
 print("=============================================================")
 print_board(board)
-# screen.fill((255, 255, 255))
-# drawGrid()
-# running = True
-# while running:
-#     screen.fill((255, 255, 255))
-#     for event in pygame.event.get():
-#         if event.type == pygame.QUIT:
-#             running = False
-#     pygame.display.update()
-# pygame.quit()
+drawGrid()
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    pygame.display.update()
+pygame.quit()
