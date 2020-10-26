@@ -67,7 +67,6 @@ def populate():
 
 
 def print_board(bo):
-    pygame.display.update()
     for i in range(len(bo)):
         if i % 3 == 0 and i != 0: 
             print("- - - - - - - - - - - - ")
@@ -111,7 +110,6 @@ def valid(bo, num, pos):
 
 
 def solver(bo):
-   ## print_board(bo)
     find = find_empty(bo)
     if not find:
         return True
@@ -140,7 +138,7 @@ solver(board)
 print("=============================================================")
 print_board(board)
 # screen.fill((255, 255, 255))
-drawGrid()
+# drawGrid()
 # running = True
 # while running:
 #     screen.fill((255, 255, 255))
