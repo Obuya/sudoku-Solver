@@ -1,6 +1,8 @@
 import pygame
 
+# to get a gui of the board being solved, simply uncomment the lines of code bellow.
 
+# input sudoku board here. place a '0' for empty cells.
 board =  [
     [0,2,0,0,0,0,0,0,0],
     [0,0,0,6,0,0,0,0,3],
